@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html ng-app="app">
-    <head>
-        <meta charset="utf-8">
-        <title>Angular Project</title>
-    </head>
-    <body ng-controller='mainController as vm'>
+<html>
 
-        <script src="js/libs/angular.min.js"></script>
-        <script src="js/controllers/mainController.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Angular Project</title>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+
+</head>
+
+<body ng-app="app">
+    <div ng-controller="mainController"> {{message }}
+    <form novalidate>
+        <div>
+            <label for="nom">Nom :</label>
+            <input ng-model="nom" type="text" name="nom" />
+        </div>
+        <div>
+            <label for="prenom">Prenom :</label>
+            <input ng-model="prenom" type="text" name="prenom" />
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input ng-model="email" type="email" name="email" />
+        </div>
+
+        <button type="button" ng-click="validate()">Ajouter</button>
+        <input type="button" ng-click="reset()" value="Effacer" />
+    </form>
+        <table id="tableau" ng-style="Style">
+            <tbody>
+                <tr>
+                    <td> {{name}}</td>
+                    <td> {{firstname}}</td>
+                    <td> {{mail}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+</body>
+
+
+
 </html>

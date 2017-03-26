@@ -1,2 +1,6 @@
-angular.module('app', [])
-    .controller('mainController', mainController);
+angular.module('app', []);
+
+
+
+
+
